@@ -2,7 +2,7 @@
 // check_models.php
 
 // DÁN API KEY CỦA BẠN VÀO ĐÂY
-$apiKey = 'AIzaSyDrc_7W4uv6U5zeFlmExZ5SzrSeIgOOHHY'; // Thay bằng key của bạn
+$apiKey = '......'; // Thay bằng key của bạn
 
 // URL để lấy danh sách models
 $listModelsUrl = 'https://generativelanguage.googleapis.com/v1beta/models?key=' . $apiKey;
