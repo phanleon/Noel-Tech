@@ -1,0 +1,114 @@
+/* --- General Styles --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eef5f9; /* Màu nền nhẹ để nổi card */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* --- Garland Frame --- */
+.garland-frame {
+    position: relative;
+    padding: 10px; /* Khoảng đệm nhỏ xung quanh */
+}
+
+/* Tạo viền cây thông bằng pseudo-elements */
+.garland-frame::before,
+.garland-frame::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 45px; /* Độ rộng của viền cây thông */
+    background-image: url('../images/garland.png'); /* Đường dẫn tới ảnh cây thông */
+    background-repeat: repeat-y; /* Lặp lại theo chiều dọc */
+    z-index: 10;
+}
+
+.garland-frame::before {
+    left: 0;
+    background-position: left top;
+}
+
+.garland-frame::after {
+    right: 0;
+    background-position: right top;
+}
+
+
+/* --- Product Card Styles --- */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    /* Đẩy card vào trong để không bị viền cây thông che mất */
+    margin: 0 45px;
+}
+
+.product-image {
+    position: relative;
+    margin-bottom: 20px;
+    height: 280px; /* Cho chiều cao cố định để ảnh không nhảy lung tung */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.santa-hat {
+    position: absolute;
+    top: 10px;
+    right: 55px; /* Điều chỉnh vị trí của nón cho phù hợp */
+    width: 45px;
+    transform: rotate(15deg);
+}
+
+.product-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #D22B2B; /* Màu đỏ lễ hội */
+    margin: 0 0 5px;
+}
+
+.product-subtext {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0 0 25px;
+}
+
+.buy-now-btn {
+    background-color: #1E6C4A; /* Màu xanh lá đậm */
+    color: #ffffff;
+    border: none;
+    border-radius: 50px; /* Bo tròn hoàn toàn */
+    padding: 14px 0;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-now-btn:hover {
+    background-color: #165038;
+    transform: translateY(-2px); /* Hiệu ứng nhấc lên khi hover */
+}
