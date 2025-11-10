@@ -12,7 +12,7 @@ if (empty($user_message)) {
 // --- GỌI API CỦA GOOGLE GEMINI ---
 
 // THAY THẾ BẰNG API KEY BẠN VỪA LẤY TỪ GOOGLE AI STUDIO
-$apiKey = 'AIzaSyDrc_7W4uv6U5zeFlmExZ5SzrSeIgOOHHY'; 
+$apiKey = '.....'; 
 
 // URL của API Gemini Pro. Chú ý: khác với OpenAI
 $apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' . $apiKey;
